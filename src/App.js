@@ -1,4 +1,80 @@
-function App()
+function App(){
+  var unit=126
+  return(<>
+  <h1>Calculate Eb bill</h1>
+  <h2>{(unit<=100 && "Rs.0") ||
+  (unit>=101 && unit<=125 && "Rs.50") ||
+  (unit>=126 && unit<=200 && "Rs."+(unit-100)*2) ||
+  (unit>=201 && unit<=300 &&  "Rs."+(200+(unit-200)*3))||
+  (unit>=301 && unit<=400 && "Rs."+(500+(unit-300)*4)) ||
+   "Rs."+(900+(unit-400)*5)
+   }
+  
+  
+  </h2>
+   </>)
+}
+export default App
+
+
+/*function App()
+{
+  var age=20
+  return(<>
+  <h1>Age eligible for vote or not</h1>
+  <h2>{(age>=18 && "This is eligible age for Vote") || "Not eligible for Vote"}</h2>
+  </>)
+}
+export default App
+ /*function App()
+{
+  var num=85
+  return(<>
+  <h1>Simple if else if or else if ladder</h1>
+  <h2>{(num>=85 && "Outstanding") || (num>=75 && "Excellent") || (num>=65 && "Verygood") 
+  || (num>=55 && "Good" ) ||  "Fair" }</h2></>)
+}
+export default App
+
+
+
+
+/*function App()
+{
+  var mark=40
+  return(<>
+     <h1>Given number even or add</h1>
+     <h2>{(mark%2===0 && "Even")|| "Odd"}</h2>
+  </>)
+}
+export default App
+
+
+/*function App()
+{
+  var mark=33
+  return(<>
+  <h1>React simple if statement</h1>
+  <h2>{(mark>34 && "PASS") || "FAIL"}</h2>
+  </>)
+}
+export default App
+
+
+
+/*function App()
+{
+  var mark=35
+  return(<>
+  <h1>React simple if statement</h1>
+  <h2>{mark>34 && "PASS"}</h2>
+  </>)
+}
+export default App
+
+
+
+/*function App()
 {
   if(true)
   {
