@@ -1,5 +1,94 @@
-function App(){
-  var unit=126
+
+function App()
+{
+  var arr=[11,22,33,44,55,105,66,77,88,99,100]
+  var s=0
+  var ma=arr[0]
+  return(<>
+  <h1>React Loop map method</h1>
+  <h2>old model:</h2>
+  {arr[0]}
+  {arr[1]}
+  {arr[2]}
+  {arr[3]}
+  {arr[4]}
+  {arr[5]}
+  {arr[6]}
+  {arr[7]}
+  {arr[8]}
+  <h2>New model map(loop):</h2>
+  {arr.map((v)=><>
+  {v}<br></br></>)}
+
+<h2>New model:</h2>
+<ol type="A">
+{arr.map((v)=><li>{v}</li>)}
+</ol>
+<h2>Task:Sum of Array</h2>
+<div style={{display:"none"}}>
+  {arr.map((item)=><>{s=s+item}<br></br></>)}
+</div>
+<h3>Sum of Array:{s}</h3>
+
+<div style={{display:"none"}}>
+  {arr.map((item)=><>{ma<item && <> {ma=item} </>}</>)}
+  
+</div>
+<h3>Maximum of Array:{ma}</h3>
+
+
+</>)}
+export default App
+
+
+
+
+/*function App()
+{
+  var arr=[11,22,33,44,55,66]
+  var[v1,,v2,...v3]=arr
+  return(<>
+     <h2><u>Spread operator</u></h2>
+     <h3>index 0: {v1}</h3>
+     <h3>index 1: {v2}</h3>
+     <h3>index 4: {v3}</h3>
+       </>)
+}
+export default App
+/*function App()
+{
+  var arr=[11,22,33,44,55,66]
+  
+  return(<>
+     <h2><u>Spread operator(Array)</u></h2>
+     <h3>index 0: {arr[0]}</h3>
+     <h3>index 1: {arr[1]}</h3>
+     <h3>index 4: {arr[4]}</h3>
+     <h3>index 6: {arr[6]}</h3>
+       </>)
+}
+export default App
+
+
+/*function App()
+{
+  var res="fail"
+  var num=50
+  return(<>
+  <h1>Nested if</h1>
+  <h2>{
+  (res==="pass" && ((num>=85 && "Outstanding") || (num>=75 && "Excellent") || (num>=65 && "Verygood") 
+  || (num>=55 && "Good" ) ||  "Fair")) 
+  || "No grade because fail"
+  }</h2></>)
+}
+export default App
+
+
+
+
+/*function App(){
+  var unit=420
   return(<>
   <h1>Calculate Eb bill</h1>
   <h2>{(unit<=100 && "Rs.0") ||
