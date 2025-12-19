@@ -1,9 +1,143 @@
+import React from "react";
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state={
+      sno:this.props.data.rno,
+      stname:this.props.data.sname,
+      smark:this.props.data.mark,
+      srank:this.props.data.rank,
+      sgrade:this.props.data.grade,
+      slocation:this.props.data.location,
+    }
+  }
+  render()
+  {
+    return(<>
+    <h1>Studentdetails:</h1>
+    <h2>StudentRollNo: {this.state.sno}</h2>
+     <h2>StudentName: {this.state.stname}</h2>
+     <h2>StudentMark: {this.state.smark}</h2>
+      <h2>StudentRank: {this.state.srank}</h2>
+       <h2>StudentGrade: {this.state.sgrade}</h2>
+        <h2>StudentLocation: {this.state.slocation}</h2>
+    </>)
+  }
+}
+export default App
+/*import React from "react";
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state={
+      studentname:this.props.sname,
+      studentmark:this.props.mark
+
+    }
+  }
+  render()
+  {
+    return(<>
+    <h1>Combine React state + props</h1>
+    <h2>Student Name: {this.state.studentname}</h2>
+    <h2>Student Mark: {this.state.studentmark}</h2></>)
+  }
+
+}
+
+export default App
+
+
+
+
+
+/*import React from "react";
+class App extends React.Component
+{
+  constructor()
+  {
+    super()
+    this.state={
+      sno:123,
+      sname:"Krizh",
+      marks:[95,85,65,55,70]
+    
+      
+    }
+  }
+  show=()=>
+  {
+    this.setState({sname:"V Sathyakrishna"})
+  }
+  dis=()=>{
+    this.setState({marks:[50,40,30,20,25]})
+  }
+  dis1=()=>{
+    const newmarks=[...this.state.marks]
+    newmarks[4]=100
+    this.setState({marks:newmarks})
+  }
+  render()
+  {
+    return(
+      <>
+      <h1>This is Class Component</h1>
+      <h2>Serial Number: {this.state.sno}</h2>
+      <h2>Student Name: {this.state.sname}</h2>
+      
+     {this.state.marks.map((item,index)=><>Mark {index+1}={item}<br></br></>)}
+     <button onClick={this.show}>Update Name</button><br></br>
+     <button onClick={this.dis}>Update all marks</button><br></br>
+     <button onClick={this.dis1}>Update single mark</button>
+      </>
+    )
+  }
+}
+export default App
+
+/*
+import { aadhar, accno, place, sname } from "./mycomponents/commomvar"
 
 function App()
 {
-  var arr=[11,22,33,44,55,105,66,77,88,99,100]
+  return(
+    <>
+      <h1>Myname is:{sname}</h1>
+      <h2>My city:{place}</h2>
+      <h2>Acc no:{accno}</h2>
+      <h2>Aadhar: {aadhar}</h2>
+    </>
+  )
+}
+export default App
+
+/*
+import Krishna from "./mycomponents/Krishna"
+
+function App()
+{
+  return(
+    <>
+    <Krishna/>
+        <h1>This is default  App Component </h1>
+        
+
+    </>
+  )
+}
+export default App
+/*function App()
+{
+  var arr=[11,22,33,44,55,66,77,88,99,105,12]
   var s=0
   var ma=arr[0]
+
+  var order=arr
+  var fans=""
   return(<>
   <h1>React Loop map method</h1>
   <h2>old model:</h2>
@@ -36,6 +170,25 @@ function App()
 </div>
 <h3>Maximum of Array:{ma}</h3>
 
+<h2>Ascending order:</h2>
+<div style={{display:"none"}}>{order.sort((x,y)=>(x-y))}</div>
+{order.map((item)=><>{item} +</>)}
+
+<h2>Desending order:</h2>
+<div style={{display:"none"}}>{order.sort((x,y)=>(y-x))}</div>
+{order.map((item)=><>{item} -</>)}
+
+<h2>Adding element in an array:</h2>
+<div style={{display:"none"}}>{order.push(999)}</div>
+{order.map((item)=><>{item} ,</>)}
+
+<h2>Deleting last element:</h2>
+<div style={{display:"none"}}>{order.pop(999)}</div>
+{order.map((item)=><>{item} ,</>)}
+
+<h2>Remove last comma or plus or any char:</h2>
+<div style={{display:"none"}}>{order.map((item)=><>{fans=fans+item+","}</>)}</div>
+      {fans.slice(0,-1)}  
 
 </>)}
 export default App
