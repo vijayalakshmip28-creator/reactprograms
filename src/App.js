@@ -1,4 +1,81 @@
-import React from "react";
+function App(props)
+{
+  var a=props.data.No 
+  var b=props.data.Myname
+  var c=props.data.Aadhar
+  var d=props.data.Mark
+  var e=props.data.Qualification
+  var f=props.data.Hobbies
+    return(<>
+    <h2><u>Find Datatype:</u></h2>
+    <h3>Type of no: {typeof(a)}</h3>
+    <h3>Type of name: {typeof(b)}</h3>
+    <h3>Type of aadhar: {typeof(c)}</h3>
+    <h3>Type of mark: {Array.isArray(d)?"it is array":"it is object json"}</h3>
+   <h3>Type of qualification: {typeof(e)}</h3> 
+   <h3>Type of hobbies: {Array.isArray(f)?"it is array":"it is object json"}</h3></>)
+  
+}
+export default App
+
+
+/*import React from "react";
+import parse from 'html-react-parser'
+function App(props)
+{
+  var ans=""
+  for (var s in props.data)
+  {
+    ans=ans+ `<li>${s} = ${props.data[s]}<br> </br></li>`
+    console.log(s)
+  }
+
+  return(
+    <>
+    <h2>Combine react + props(function method)</h2>
+    {parse("<ol type='a'>"+ans+"</ol>")}
+    </>
+  )
+}
+export default App
+
+
+
+/*import React from "react";
+import parse from 'html-react-parser'
+class App extends React.Component
+{
+  constructor(props)
+  {
+    var ans=""
+    super(props)
+    for(var s in props.data)
+    {
+      ans=ans+`<li>${s} = ${props.data[s]}<br>   </br></li>`
+      console.log(s)
+    }
+    //var h="<ol>"
+    this.state={
+      //res:h+ans
+      res:"<ol type='I'>"+ans+"</ol>"
+     
+    }
+  }
+  render()
+  {
+    return(<>
+       <h1>Combine react state + props</h1>
+       {parse(this.state.res)}
+       <div id="res"></div></>)
+  }
+}
+export default App
+
+
+
+
+
+/*import React from "react";
 class App extends React.Component
 {
   constructor(props)

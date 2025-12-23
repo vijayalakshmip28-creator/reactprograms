@@ -5,12 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
     var sobj={
-          rno:1,
-          sname:"Vijayalakshmi",
-          mark:95,
-          rank:3,
-          grade:"super",
-          location:"karur",
+          No:1,
+          Myname: "P.Vijayalakshmi",
+          Aadhar: "204428660345",
+          Qualification: "B.Com(CA)" ,
+          Certificate: "IIBF and IRDA" ,
+          Location:"Lalapet,karur",
+          Experiance: "2 years",
+          Mark: [90,95,80,75,50],
+          Hobbies:{
+            hob1:"Search new things",
+            hob2:"DigitalMarketing"
+          }
           
     }
 
