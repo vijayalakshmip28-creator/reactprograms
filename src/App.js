@@ -1,3 +1,81 @@
+import { useState } from 'react'
+import React from 'react'
+
+const App = () => {
+  const [name,setName]=useState("---")  //default value
+
+    const dis=(event)=>{
+        setName(event.target.value)
+    }
+        
+    const show =(v)=>{
+      console.log(v)
+    }  
+    const find =(v1,v2)=>{
+      console.log(v1+v2)
+    }
+    
+  return (
+    <div>
+      <form>
+        <input type='text' value={name} onChange={dis} placeholder='enter your name' ></input><br></br>
+         <input type='password' onChange={()=> show ("12345")} placeholder='enter your password'></input><br></br>
+          <input type='number' onChange={()=>find(10,25)} placeholder='enter accno'></input><br></br>
+           <input type='email' placeholder='enter email'></input><br></br>
+            <input type='date' placeholder='dob' name='dob'></input><br></br>
+             <input type='time' name='time'></input><br></br>
+              <label>Select gender</label>
+               <input type='radio' name='gender'></input>Male
+                <input type='radio' name='gender'></input>Female
+                 <input type='radio' name='gender'></input>Others<br></br>
+                 <select>
+                  <option selected>Select month</option>
+                  <option>JAn</option>
+                  <option>Feb</option>
+                  <option>March</option>
+                 </select><br></br>
+                 <label>Select course:</label>
+                 <input type='checkbox'name='c1'></input>C++
+                 <input type='checkbox'name='c2'></input>Javascript
+                 <input type='checkbox'name='c3'></input>Java
+                 <input type='checkbox'name='c4'></input>Programming language
+                 <input type='checkbox'name='c5'></input>Digitalmarketing
+                 <br></br>
+                 Upload resume:<input type='file'></input>
+                 <br></br>
+                 <button><b><s>Clickme</s></b></button>
+                 <br></br>
+                 <label>Type your address:</label>
+                 <textarea rows="7" cols="25"></textarea>
+                 <br></br>
+                 <label>SelectDate:</label>
+                 <select size="4" multiple>
+                  <option>Sunday</option>
+                  <option>Monday</option>
+                  <option>Tuesday</option>
+                  <option>Wednesday</option>
+                  <option>Thursday</option>
+                  <option>Friday</option>
+                  <option>Saturday</option>
+                 </select>
+                 <br></br>
+                 <label>Progress bar 90% completed</label>
+                 <progress style={{backgroundColor:'green',border:"2px solid orange"}} min="0" max="100"></progress>
+                 <br></br>
+                  <font size="7">👌👍🤞💖😉</font>
+                 <label>volume:</label>
+                 <input type="range" min="0" max="6"></input>
+                 
+                 <input type='submit'></input>
+                 <input type="button" value="clickme"></input>
+                 </form>
+    </div>
+  )
+}
+
+export default App
+
+/*
 function App(props)
 {
   var a=props.data.No 
