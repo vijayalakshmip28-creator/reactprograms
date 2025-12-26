@@ -1,4 +1,90 @@
-import { useState } from 'react'
+import React from "react";
+import { useEffect,useState } from "react";
+const App=()=>
+{
+  const [name,setName]=useState("SK❤️")
+  useEffect(()=>{
+    document.title=`Hello!! ${name}`
+  })
+  const dis=()=>{
+    setTimeout(()=>{
+    setName("👍Sathiyakrishna")
+  },5000)
+}
+   const dis1=()=>{
+    setName("👍BharaniSRI.....")
+  }
+
+  return(<div>
+    <h1>UseEffect and useState Hook</h1>
+    <button onClick={dis}>ChangeName</button>
+    <button onClick={dis1}>ChangeName</button>
+    <br></br>
+    {name}
+  </div>)
+}
+export default App
+
+
+/*import React from "react";
+import { useEffect } from "react";
+const App=()=>
+{
+  useEffect(()=>{
+    document.title=`Sk💖`
+  })
+  return(<div>
+    <h1>UseEffect Hook</h1>
+  </div>)
+}
+export default App
+
+
+/*import React from "react";
+import { useState } from "react";
+const App=()=>
+{
+   const[count,setCount]=useState(0)
+  const dis=(event)=>{
+     
+        setCount(parseInt(event.target.value)+1)
+}
+return(
+  <div>
+  <button onClick={dis}   value={count}>You clicked: {count} times</button>
+  
+  </div>
+)
+}
+export default App
+  
+/*import { useState } from "react";
+function App()
+{
+  const[count,setCount]=useState(0)
+  const show=(event)=>{
+       if(event.target.id==="b1")
+        setCount(count+1)
+      if(event.target.id==="b2")
+        setCount(count-1)
+      if(event.target.id==="b3")
+        setCount(count-5)
+    }
+  return(
+<>
+<button id="b1" onClick={show}>Increment By 1</button>
+<button id="b2" onClick={show}>Decrement By 1</button><br></br>
+<button id="b3" onClick={show}>Decrement by 5</button>
+<br></br>
+<h2>{count}</h2>
+</>
+)
+}
+export default App
+
+
+
+/*import { useState } from 'react'
 import React from 'react'
 
 const App = () => {

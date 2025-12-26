@@ -2,7 +2,7 @@ function Viji()
 {
     return(
         <>
-        <h1>This is Krizh Component</h1>
+        <h1>This is User defined Component</h1>
         </>
     )
 }
