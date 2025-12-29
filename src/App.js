@@ -1,11 +1,31 @@
 import React from "react";
+import "./App.css"
+import myimg from './images/key.jpg'
+function App()
+{
+  return(
+    <div id="outer" align="center">
+    <div id="inner">
+    <img id="savi" src={myimg} width="100" height="auto" alt='path in wrong'></img>
+    <h1>ADMIN PANEL</h1>
+    <input type="text" placeholder="Enter user name"></input>
+     <input type="password" placeholder="Enter password"></input>
+    <button>Login</button>
+</div>
+  </div>
+   
+  )
+}
+export default App
+
+/*import React from "react";
 import { useEffect,useState } from "react";
 const App=()=>
 {
   const [name,setName]=useState("SK❤️")
   useEffect(()=>{
     document.title=`Hello!! ${name}`
-  })
+  }) 
   const dis=()=>{
     setTimeout(()=>{
     setName("👍Sathiyakrishna")

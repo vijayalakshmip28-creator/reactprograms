@@ -1,4 +1,5 @@
-.App {
+
+/*.App {
   text-align: center;
 }
 
@@ -36,3 +37,66 @@
     transform: rotate(360deg);
   }
 }
+*/
+#outer
+{
+  box-shadow: 5px 10px 15px 10px blue;
+  border-radius: 50px;
+  width:50%;
+  /*height: 400px;*/
+  background-color: gray;
+  transform: translate(50%,50%);
+ 
+}
+input,button
+{
+  display: block;
+  margin-bottom: 40px;
+}
+input{
+  width: 75%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  text-align: center;
+   font-size: 30px;
+}
+h1{
+  background-color: black;
+  color: gray;
+}
+button
+{
+  padding: 15px;
+  margin-right: 50px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  font-size: 25px;
+}
+button:hover
+{
+  font-weight: bold;
+  border: 3px dotted red ;
+  outline: 4px solid black;
+  cursor: pointer;
+  color: red;
+  background-color: blanchedalmond;
+}
+img
+{
+  position: relative;
+  animation-name: viji;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+@keyframes viji
+{
+  
+from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg); 
+  }}
