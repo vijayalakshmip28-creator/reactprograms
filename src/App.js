@@ -1,4 +1,53 @@
-import React from "react";
+import { useState } from "react"
+function App()
+{
+  const [city,SetCity]=useState("karur")
+  const [list,setList]=useState("null")
+  const upCity=(event)=>{
+    SetCity(event.target.value);
+  }
+  const findweather=()=>
+  {
+    console.log("city name:",city);
+      var api=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c99e20f637c0adcc55e89e826b874264`;
+
+      fetch(api)
+      .then((responce)=>responce.json())
+        .then((data)=>{
+          console.log(data);
+          setList(data)
+      })
+      .catch((err)=>
+      {
+        console.log(""+err);
+        setList(err)
+      })
+    } 
+  return(
+    <>
+       <h2><center>fetch - API</center></h2>
+       <h2>Weather Report</h2>
+       <label>Enter City Name</label><input type="text" value={city} onChange={upCity}></input>  
+       <br></br>
+       <input type="button" onClick={findweather} value="GetReport">
+       </input> 
+       <br></br>
+       {list.cod===200 &&
+       <>
+       <h2>Final Report</h2>
+       <h3>Main Report:{list!==null  && list.weather[0].main}</h3>
+        <h3>Description:{list !==null && list.weather[0].description}</h3>
+        <h3>Temparature:{list !==null && list.main.temp}</h3>  
+       </>}
+
+{
+  list.cod==="404" && 
+  <h3>Error Message: {list!==null && list.cod==='404' && list.message}</h3>
+}
+</>)
+}
+export default App 
+/*import React from "react";
 import "./App.css"
 import myimg from './images/key.jpg'
 function App()
